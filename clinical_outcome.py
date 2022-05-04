@@ -90,10 +90,11 @@ class Clinical_outcome:
         Calculates the probability of good outcome for all patients admitted
         with acute stroke. 
 
-        Based on Holodinsky et al. (2018) Drip-and-Ship vs. Mothership: 
-        Modelling Stroke Patient Transport for All Suspected Large Vessel
-        Occlusion Patients. JAMA Neuro (in press)
-
+        Based on:
+        Holodinsky JK, Williamson TS, Demchuk AM, et al. Modeling Stroke Patient
+        Transport for All Patients With Suspected Large-Vessel Occlusion. JAMA 
+        Neurol. 2018;75(12):1477-1486. doi:10.1001/jamaneurol.2018.2424
+        
         Sums outcomes for:
 
         1) mimics
@@ -157,9 +158,10 @@ class Clinical_outcome:
             self._calculate_thrombectomy_outcome_for_lvo(onset_to_puncture)
 
         
-        # Weigth results by proportion of patients
-        # ----------------------------------------
+        # Weight outcome results by proportion of patients
+        # ------------------------------------------------
         
+        # 'Results' are good outcomes
         results = pd.DataFrame()
         
         # Results for mimic
